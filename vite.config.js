@@ -12,5 +12,5 @@ export default defineConfig({
             '~': path.resolve(__dirname, './node_modules'),
         },
     },
-    base: './',
+    base: '/The_F2E_index/',
 })
