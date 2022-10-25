@@ -1,5 +1,5 @@
 <script setup>
-import { gsap } from './utils/gsap'
+import { gsap } from './utils/gsap.js'
 import { ref, onMounted } from 'vue'
 
 //變數需與 template ref 的名稱一樣
