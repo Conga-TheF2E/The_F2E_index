@@ -7,14 +7,17 @@ const hello_GSAP = ref(null)
 onMounted(() => {
     gsap.to(hello_GSAP.value, {
         duration: 1.5,
-        x: 100,
+        y: 50,
+        yoyo: true,
         repeat: -1,
     })
 })
 </script>
 
 <template>
-    <div ref="hello_GSAP" id="el">hi</div>
+    <section class="container">
+        <div ref="hello_GSAP" id="el">灰色為各種大小螢幕呈現內容，請調整視窗大小~</div>
+    </section>
 </template>
 
 <style scoped></style>

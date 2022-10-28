@@ -1,0 +1,20 @@
+$breakpoints: (
+    desktop: 1200px,
+    mobile: 568px,
+);
+
+@mixin for-mobile {
+    @media screen and (max-width: map-get($breakpoints, 'mobile')) {
+        @content;
+    }
+}
+@mixin for-pad {
+    @media screen and (max-width: map-get($breakpoints, 'desktop')) and (min-width: map-get($breakpoints, 'mobile')) {
+        @content;
+    }
+}
+@mixin for-desktop {
+    @media screen and (min-width: map-get($breakpoints, 'desktop')) {
+        @content;
+    }
+}

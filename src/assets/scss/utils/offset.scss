@@ -1,0 +1,27 @@
+@mixin offset-margin($margin, $value) {
+    margin-#{$margin}: $value;
+}
+@mixin offset-padding($margin, $value) {
+    padding-#{$margin}: $value;
+}
+$property: (
+    top: 't',
+    bottom: 'b',
+    left: 'l',
+    right: 'r',
+);
+
+@for $i from 1 through 20 {
+    @each $margin in top, left, bottom, right {
+        .m#{map-get($property, $margin)}-#{$i} {
+            @include offset-margin($margin, 5px * $i);
+        }
+    }
+}
+@for $i from 1 through 20 {
+    @each $margin in top, left, bottom, right {
+        .p#{map-get($property, $margin)}-#{$i} {
+            @include offset-padding($margin, 5px * $i);
+        }
+    }
+}
