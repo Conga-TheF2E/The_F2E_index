@@ -1,0 +1,79 @@
+.Section1 {
+    $offset: 40px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: $offset;
+
+    @include for-pad {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__activityTitle {
+        font-size: 68px;
+        font-weight: 700;
+    }
+    &__activitySubtitle {
+        font-size: 90px;
+        font-weight: 700;
+        transform: scaleX(1.5);
+        transform-origin: top left;
+    }
+
+    .bg {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .clip-each--hexagon {
+        width: 548px;
+        height: 475px;
+        -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+        // -webkit-clip-path: url('#hexagon-clip');
+        // clip-path: url('#hexagon-clip');
+    }
+
+    .Section1__hoverBox {
+        width: 548px;
+        height: 475px;
+        background: #4f26e9;
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        margin: 60px 0;
+    }
+    .Section1__hoverBox__inner {
+        background: #d8f34f;
+        /* border-radius: 50%; */
+
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+
+        overflow: hidden;
+    }
+
+    &__attendActivityPeople {
+        position: absolute;
+        bottom: $offset;
+        width: 100%;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            h4 {
+                font-size: 18px;
+            }
+            p {
+                font-weight: 700;
+                font-size: 15px;
+            }
+        }
+    }
+}
