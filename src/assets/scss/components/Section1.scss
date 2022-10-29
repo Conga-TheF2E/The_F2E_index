@@ -13,20 +13,16 @@
     }
 
     &__activityTitle {
+        font-family: 'OTF_Glusp';
         font-size: 68px;
         font-weight: 700;
+        white-space: nowrap;
     }
     &__activitySubtitle {
         font-size: 90px;
         font-weight: 700;
         transform: scaleX(1.5);
         transform-origin: top left;
-    }
-
-    .bg {
-        display: flex;
-        justify-content: center;
-        align-items: center;
     }
 
     .clip-each--hexagon {
