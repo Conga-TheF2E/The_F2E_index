@@ -57,13 +57,13 @@ onMounted(() => {
 </script>
 <template>
     <section class="Section1">
-        <div style="z-index: 10">
-            <h1 class="Section1__activityTitle">THE F2E 4TH</h1>
-            <p class="Section1__activitySubtitle">互動式網頁設計</p>
+        <div class="Section1__activityTitle">
+            <h1>THE F2E 4TH</h1>
+            <p>互動式網頁設計</p>
         </div>
-        <div>
+        <div class="Section1__hoverBox">
             <div
-                class="Section1__hoverBox clip-each--hexagon"
+                class="Section1__hoverBox__outer clip-each--hexagon"
                 id="Section1__hoverBox"
                 @mouseover="innerBoxAnimationPlay"
                 @mouseleave="innerBoxAnimationReverse"

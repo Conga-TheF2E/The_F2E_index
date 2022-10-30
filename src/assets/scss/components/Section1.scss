@@ -2,7 +2,7 @@
     $offset: 40px;
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: center;
 
     padding: $offset;
@@ -13,53 +13,52 @@
     }
 
     &__activityTitle {
-        font-family: 'OTF_Glusp';
-        font-size: 68px;
-        font-weight: 700;
-        white-space: nowrap;
-    }
-    &__activitySubtitle {
-        font-size: 90px;
-        font-weight: 700;
-        transform: scaleX(1.5);
-        transform-origin: top left;
-    }
-
-    .clip-each--hexagon {
-        width: 548px;
-        height: 475px;
-        -webkit-clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-        clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-        // -webkit-clip-path: url('#hexagon-clip');
-        // clip-path: url('#hexagon-clip');
+        z-index: 10;
+        position: absolute;
+        top: 50%;
+        left: $offset;
+        transform: translate(0, -50%);
+        h1 {
+            font-family: 'OTF_Glusp';
+            font-size: 68px;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+        p {
+            font-size: 90px;
+            font-weight: 700;
+            transform: scaleX(1.5);
+            transform-origin: top left;
+        }
     }
 
     .Section1__hoverBox {
-        width: 548px;
-        height: 475px;
-        background: #4f26e9;
-        position: relative;
-        overflow: hidden;
-        border-radius: 16px;
-        margin: 60px 0;
-    }
-    .Section1__hoverBox__inner {
-        background: #d8f34f;
-        /* border-radius: 50%; */
+        &__outer {
+            width: 548px;
+            height: 475px;
+            background: #4f26e9;
+            position: relative;
+            overflow: hidden;
+            border-radius: 16px;
+            margin: 60px 0;
+        }
+        &__inner {
+            background: #d8f34f;
+            position: absolute;
+            top: 50%;
+            right: 50%;
+            transform: translate(50%, -50%);
 
-        position: absolute;
-        top: 50%;
-        right: 50%;
-        transform: translate(50%, -50%);
-
-        overflow: hidden;
+            overflow: hidden;
+        }
     }
 
     &__attendActivityPeople {
         position: absolute;
         bottom: $offset;
-        width: 100%;
+        right: 50%;
+        transform: translate(50%, 0);
+        width: calc(100% - $offset * 2);
         ul {
             display: flex;
             justify-content: space-between;
