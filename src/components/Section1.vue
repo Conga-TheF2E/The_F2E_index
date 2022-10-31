@@ -1,7 +1,6 @@
 <script setup>
-// 檔案不能用 -
-// import HandLeftIcon from '../assets/img/hand-left.svg'
-// import HandRightIcon from '../assets/img/hand-right.svg'
+// import HandLeftIcon from '../assets/img/hand_left.svg'
+// import HandRightIcon from '../assets/img/hand_right.svg'
 import { gsap } from '../utils/GSAP.js'
 import { ref, onMounted } from 'vue'
 
@@ -62,18 +61,18 @@ onMounted(() => {
             <p>互動式網頁設計</p>
         </div>
         <div class="Section1__hoverBox">
-            <div
-                class="Section1__hoverBox__outer clip-each--hexagon"
-                id="Section1__hoverBox"
-                @mouseover="innerBoxAnimationPlay"
-                @mouseleave="innerBoxAnimationReverse"
-            >
+            <div class="Section1__hoverBox__wrapper clip-each--hexagon">
                 <div class="Section1__hoverBox__inner clip-each--hexagon" ref="hoverBox__inner">
-                    <!-- <img class="cat cat_left" :src="HandLeftIcon" alt="hand icon" /> -->
-                    <!-- <img class="cat cat_right" :src="HandRightIcon" alt="hand icon" /> -->
+                    <!-- <img class="cat cat_left" :src="HandLeftIcon" alt="hand icon" />
+                    <img class="cat cat_right" :src="HandRightIcon" alt="hand icon" /> -->
                 </div>
             </div>
-            <svg class="clip-svg" style="position: absolute">
+            <div
+                class="Section1__hoverBox__controlAnimate__box clip-each--hexagon"
+                @mouseover="innerBoxAnimationPlay"
+                @mouseleave="innerBoxAnimationReverse"
+            ></div>
+            <svg style="position: absolute">
                 <defs>
                     <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox">
                         <polygon
