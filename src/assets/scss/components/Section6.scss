@@ -1,0 +1,147 @@
+.Section6 {
+    &__title {
+        box-sizing: border-box;
+        width: calc(1000px / 1.15965);
+        height: 211.37px;
+        line-height: calc(56.4897px / 1.15965 * 1.5);
+        background: #4f26e9;
+        font-weight: 900;
+        font-size: 56.4897px;
+        transform: scaleX(1.15965);
+        transform-origin: right;
+        text-align: end;
+        padding: 40px;
+        margin-left: auto;
+    }
+
+    &__competitionFlow {
+        margin-bottom: 125px;
+        &__title {
+            display: inline-block;
+            font-size: 36.9597px;
+            font-weight: 900;
+            transform: scaleX(1.15965);
+            transform-origin: left;
+            text-align: center;
+            background-color: #4f26e9;
+            color: #fff;
+            padding: 14px 23px 8px;
+        }
+        &__eachFlow {
+            display: flex;
+            padding-left: 54px;
+            span {
+                display: inline-block;
+                font-size: 24px;
+                font-weight: 700;
+                transform: scaleX(1.15965);
+                transform-origin: left;
+                text-align: center;
+                background-color: #d8f34f;
+                color: #1f1f1f;
+                padding: 8px 15px 4px;
+
+                margin-right: 36px;
+            }
+            p {
+                line-height: 36px;
+                font-size: 24px;
+                font-weight: 700;
+                transform: scaleX(1.15965);
+                transform-origin: left;
+                color: #fff;
+            }
+        }
+        &__eachFlow + &__eachFlow {
+            margin-top: 30px;
+        }
+    }
+    &__competitionAwards {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 170px;
+        &__title {
+            display: inline-block;
+            font-size: 36.9597px;
+            font-weight: 900;
+            transform: scaleX(1.15965);
+            transform-origin: left;
+            text-align: center;
+            background-color: #4f26e9;
+            color: #fff;
+            padding: 14px 23px 8px;
+        }
+        &__content {
+            color: #d8f34f;
+            font-size: 31px;
+            font-weight: 700;
+            transform: scaleX(1.15965);
+            transform-origin: left;
+            margin-bottom: 50px;
+            li {
+                position: relative;
+                &::before {
+                    content: '#';
+                    display: inline-block;
+                    margin-right: 12px;
+                }
+                span {
+                    display: inline-block;
+                    margin: 0 15px;
+                    font-weight: 400;
+                }
+            }
+            li + li {
+                margin-top: 40px;
+            }
+        }
+        &__note {
+            display: inline-block;
+            font-size: 31px;
+            font-weight: 700;
+            transform: scaleX(1.15965);
+            transform-origin: left;
+            text-align: center;
+            background-color: #d8f34f;
+            color: #1f1f1f;
+            padding: 13px 70px 7px;
+        }
+    }
+    &__sponsors {
+        display: flex;
+        flex-direction: column;
+        h3 {
+            width: calc(100% / 1.15965);
+            font-weight: 900;
+            font-size: 56.4897px;
+            transform: scaleX(1.15965);
+            transform-origin: left;
+            text-align: center;
+        }
+    }
+
+    &__sponsor__beehive__wrapper {
+        // min-width: 772px;
+        display: flex;
+        justify-content: center;
+    }
+
+    // beehive 下排往上50%
+    &__sponsors :nth-child(3) {
+        transform: translate(0%, -50%);
+    }
+
+    &__sponsor__beehive {
+        width: 297.61px;
+        height: 257.74px;
+        background: #4f26e9;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__sponsor__beehive + &__sponsor__beehive {
+        margin-left: calc(148px + 26px);
+    }
+}

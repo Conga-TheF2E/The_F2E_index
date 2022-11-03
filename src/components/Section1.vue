@@ -55,7 +55,7 @@ onMounted(() => {
 })
 </script>
 <template>
-    <section class="Section1">
+    <section class="Section1 container">
         <div class="Section1__activityTitle">
             <h1>THE F2E 4TH</h1>
             <p>互動式網頁設計</p>
