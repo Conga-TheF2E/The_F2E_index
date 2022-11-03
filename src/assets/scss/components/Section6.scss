@@ -111,6 +111,7 @@
     &__sponsors {
         display: flex;
         flex-direction: column;
+        min-width: 768px;
         h3 {
             width: calc(100% / 1.15965);
             font-weight: 900;
@@ -122,7 +123,6 @@
     }
 
     &__sponsor__beehive__wrapper {
-        // min-width: 772px;
         display: flex;
         justify-content: center;
     }
