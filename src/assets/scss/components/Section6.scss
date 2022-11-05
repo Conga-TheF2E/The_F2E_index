@@ -12,10 +12,32 @@
         text-align: end;
         padding: 40px;
         margin-left: auto;
+
+        &__breakLine{
+            display: none;
+        }
+        @include for-pad {
+            width: 80%;
+            line-break: auto;
+            height: auto;
+            font-size: 53.31px;
+            line-height: calc(53.31px / 1.15965 * 1.5);
+            text-align: start;
+            transform-origin: left;
+            margin-left: 0;
+            &__breakLine{
+                display: inline;
+            }
+        }
     }
 
     &__competitionFlow {
         margin-bottom: 125px;
+        @include for-pad{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
         &__title {
             display: inline-block;
             font-size: 36.9597px;
@@ -26,6 +48,9 @@
             background-color: #4f26e9;
             color: #fff;
             padding: 14px 23px 8px;
+            @include for-pad {
+                font-size: 37.08px;
+            }
         }
         &__eachFlow {
             display: flex;
@@ -42,6 +67,9 @@
                 padding: 8px 15px 4px;
 
                 margin-right: 36px;
+                @include for-pad {
+                    font-size: 24.03px; //FIXME:
+                }
             }
             p {
                 line-height: 36px;
@@ -50,6 +78,9 @@
                 transform: scaleX(1.15965);
                 transform-origin: left;
                 color: #fff;
+                @include for-pad {
+                    font-size: 24.08px; //FIXME:
+                }
             }
         }
         &__eachFlow + &__eachFlow {
@@ -71,6 +102,12 @@
             background-color: #4f26e9;
             color: #fff;
             padding: 14px 23px 8px;
+            @include for-pad {
+               font-size: 37.08px;
+            }
+            @include for-mobile {
+                font-size: 37.16px;
+             }
         }
         &__content {
             color: #d8f34f;
@@ -79,6 +116,9 @@
             transform: scaleX(1.15965);
             transform-origin: left;
             margin-bottom: 50px;
+            @include for-pad {
+                font-size: 25.69px;
+             }
             li {
                 position: relative;
                 &::before {
@@ -117,8 +157,11 @@
             font-weight: 900;
             font-size: 56.4897px;
             transform: scaleX(1.15965);
-            transform-origin: left;
+            transform-origin: 0 0;
             text-align: center;
+            @include for-pad {
+                font-size: 48.91px;
+            }
         }
     }
 
@@ -139,6 +182,14 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include for-pad {
+            width: 257.72px;
+            height: 223.19px;
+        }
+        @include for-mobile {
+            width: 125.84px;
+            height: 108.99px;
+        }
     }
 
     &__sponsor__beehive + &__sponsor__beehive {
