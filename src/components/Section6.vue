@@ -6,7 +6,7 @@ import blockstudio_logo from '../assets/img/blockstudio_logo.svg'
 <template>
     <section class="Section6 mb-10">
         <h2 class="Section6__title clip-each--Section6_title mb-11">
-            區區修練已經沒辦法滿足了嗎 ?
+            區區修練<br  class="Section6__title__breakLine" />已經沒辦法滿足了嗎 ?
             <br />
             還有比賽等著你 !
         </h2>
@@ -41,15 +41,15 @@ import blockstudio_logo from '../assets/img/blockstudio_logo.svg'
 
                 <div class="Section6__sponsor__beehive__wrapper">
                     <div class="Section6__sponsor__beehive clip-each--hexagon">
-                        <img :src="titan_logo" alt="鈦坦科技" />
+                        <img style="width: 55%" :src="titan_logo" alt="鈦坦科技" />
                     </div>
                 </div>
                 <div class="Section6__sponsor__beehive__wrapper">
                     <div class="Section6__sponsor__beehive clip-each--hexagon">
-                        <img :src="kdan_logo" alt="凱鈿行動科技" />
+                        <img style="width: 55%" :src="kdan_logo" alt="凱鈿行動科技" />
                     </div>
                     <div class="Section6__sponsor__beehive clip-each--hexagon">
-                        <img :src="blockstudio_logo" alt="板塊設計" />
+                        <img style="width: 55%" :src="blockstudio_logo" alt="板塊設計" />
                     </div>
                 </div>
             </div>
