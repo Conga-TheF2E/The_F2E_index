@@ -72,7 +72,7 @@ onMounted(() => {
                 @mouseover="innerBoxAnimationPlay"
                 @mouseleave="innerBoxAnimationReverse"
             ></div>
-            <svg style="position: absolute">
+            <svg style="position: absolute; top: 0; left: 0">
                 <defs>
                     <clipPath id="hexagon-clip" clipPathUnits="objectBoundingBox">
                         <polygon
