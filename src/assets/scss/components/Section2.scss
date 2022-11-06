@@ -1,0 +1,29 @@
+.Section2 {
+  padding-top: 104px;
+  padding-bottom: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .questionTitle {
+    font-size: 56px;
+    font-weight: bold;
+    text-align: center;
+    color: #f2e8de;
+    transform: scaleX(1.15);
+  }
+  .question1 {
+    margin-top: 43px;
+    transform: translate(-100px, 0);
+  }
+  .question2 {
+    margin-top: 35px;
+    transform: translate(160px, 0);
+  }
+  .question3 {
+    margin-top: 35px;
+    transform: translate(-40px, 0);
+  }
+  .pointer {
+    margin-top: 40px;
+  }
+}

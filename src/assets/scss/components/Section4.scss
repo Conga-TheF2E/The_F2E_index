@@ -1,0 +1,104 @@
+.Section4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 82px;
+  padding-bottom: 92px;
+
+  .title {
+    font-size: 56px;
+    font-weight: bold;
+    text-align: center;
+    color: #f2e8de;
+    transform: scaleX(1.15);
+  }
+  .titleBar {
+    margin-top: 17px;
+  }
+  .blockContainer {
+    width: 1059px;
+    margin-top: 56px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .block {
+      position: relative;
+      .outer {
+        width: 304px;
+        height: 304px;
+        border-radius: 100%;
+        background-color: #d9f24f;
+        position: relative;
+        clip-path: circle(50%);
+        .hashtag {
+          position: absolute;
+          width: 130px;
+          height: 29px;
+          top: 45px;
+          left: 50%;
+          transform: translate(-50%, 0%);
+        }
+        .outerContent {
+          position: absolute;
+          width: 254px;
+          height: 79px;
+          top: 112px;
+          left: 50%;
+          transform: translate(-50%, 0%);
+        }
+        .inner {
+          // display: none;
+          position: absolute;
+          width: 100px;
+          height: 100px;
+          border-radius: 100%;
+          background-color: #4f26e9;
+          clip-path: circle(50%);
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          .innerContent {
+            position: absolute;
+            width: 207px;
+            height: 29px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+      .outerBar {
+        width: 198px;
+        height: 41px;
+        background-color: #4f26e9;
+        position: absolute;
+        left: -25px;
+        bottom: 46px;
+        p {
+          font-family: "OTF_Glusp";
+          position: relative;
+          top: 50%;
+          text-align: center;
+          transform: translate(0%, -50%);
+        }
+        .innerBar {
+          width: 100px;
+          height: 41px;
+          background-color: #f2e8de;
+          position: absolute;
+          top: 0;
+          left: 0%;
+          overflow: hidden;
+          .innerBarContent {
+            width: 106px;
+            height: 20px;
+            position: absolute;
+            left: 100px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+          }
+        }
+      }
+    }
+  }
+}
