@@ -5,11 +5,13 @@ import blockstudio_logo from '../assets/img/blockstudio_logo.svg'
 </script>
 <template>
     <section class="Section6 mb-10">
-        <h2 class="Section6__title clip-each--Section6_title mb-11">
-            區區修練<br  class="Section6__title__breakLine" />已經沒辦法滿足了嗎 ?
-            <br />
-            還有比賽等著你 !
-        </h2>
+        <div class="Section6__title clip-each--Section6_title mb-11">
+            <h2>
+                區區修練<br class="Section6__title__breakLine" />已經沒辦法滿足了嗎 ?
+                <br />
+                還有比賽等著你 !
+            </h2>
+        </div>
         <div class="container" style="padding: 0 40px">
             <div class="Section6__competitionFlow">
                 <h3 class="Section6__competitionFlow__title mb-7">評審機制</h3>
