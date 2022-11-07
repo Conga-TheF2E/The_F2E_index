@@ -41,7 +41,7 @@ onMounted(() => {
         //向下滾動進入start點時觸發callback
         onEnter: function () {
             gsap.set(section3.value, { opacity: 1, visibility: 'visible' })
-            // 僅創建一次動畫
+            // 除跑馬燈外，僅創建一次動畫
             if (!isAnimation) {
                 isAnimation = true
                 addAnimateToCircle(outer_circle.value, 'outer_circle', '1745, 1745')
@@ -77,6 +77,7 @@ onMounted(() => {
                     opacity: 0,
                     duration: 0.65,
                 })
+                // 手淡入
 
                 // 手手抖動
                 gsap.to(hand_left_container.value, {
@@ -109,18 +110,8 @@ onMounted(() => {
                     repeat: -1,
                 })
                 // 手手抖動
-                const container_height = text_container.value.getBoundingClientRect().height
-                gsap.fromTo(
-                    text_F2E.value,
-                    { y: container_height * 1 },
-                    { y: -1 * container_height, duration: 1.7, ease: 'none' },
-                )
-                gsap.fromTo(
-                    text_2022.value,
-                    { y: container_height * 1 },
-                    { y: -1 * container_height, duration: 1.7, ease: 'none', delay: 1 },
-                )
             }
+            RunningText()
         },
 
         // //向下滾動超過end點時觸發callback
@@ -128,11 +119,26 @@ onMounted(() => {
         //     hide(box2)
         // },
 
-        // //向上滾動超過end點時觸發（回滾時觸發）callback
-        // onEnterBack: function () {
-        //     console.log(456)
-        // },
+        //向上滾動超過end點時觸發（回滾時觸發）callback
+        onEnterBack: function () {
+            RunningText()
+        },
     })
+
+    // 文字跑馬燈
+    function RunningText() {
+        const container_height = text_container.value.getBoundingClientRect().height
+        gsap.fromTo(
+            text_F2E.value,
+            { y: container_height * 1 },
+            { y: -1 * container_height, duration: 1.7, ease: 'none' },
+        )
+        gsap.fromTo(
+            text_2022.value,
+            { y: container_height * 1 },
+            { y: -1 * container_height, duration: 1.7, ease: 'none', delay: 1 },
+        )
+    }
 })
 </script>
 <template>
