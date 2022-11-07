@@ -30,14 +30,17 @@ function addAnimateToCircle(element, name, toValue) {
 }
 
 onMounted(() => {
+    gsap.set(section3.value, { opacity: 0, visibility: 'hidden' })
     // 偵測滾動範圍觸發動畫
     ScrollTrigger.create({
         //以section3作為觸發時機
         trigger: section3.value,
+        start: 'top -5%',
         markers: true,
 
         //向下滾動進入start點時觸發callback
         onEnter: function () {
+            gsap.set(section3.value, { opacity: 1, visibility: 'visible' })
             // 僅創建一次動畫
             if (!isAnimation) {
                 isAnimation = true
@@ -61,6 +64,18 @@ onMounted(() => {
                     transformOrigin: 'center',
                     duration: 6,
                     repeat: -1,
+                })
+
+                // 手淡入
+                gsap.from(hand_left_container.value, {
+                    x: -120,
+                    opacity: 0,
+                    duration: 0.65,
+                })
+                gsap.from(hand_right_container.value, {
+                    x: 120,
+                    opacity: 0,
+                    duration: 0.65,
                 })
 
                 // 手手抖動
