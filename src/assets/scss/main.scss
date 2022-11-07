@@ -1,11 +1,13 @@
-@import "reset.css";
-@import "./utils/font.scss";
-@import "./utils/breakpoints";
-@import "./utils/offset.scss";
-@import "./utils/clip_path.scss";
-@import "layout";
+@import 'reset.css';
+@import './utils/font.scss';
+@import './utils/breakpoints';
+@import './utils/offset.scss';
+@import './utils/clip_path.scss';
+@import './utils/commonStyle.scss';
+@import 'layout';
 
-@import "./components/Section1.scss";
-@import "./components/Section2.scss";
-@import "./components/Section4.scss";
-@import "./components/Section6.scss";
+@import './components/Section1.scss';
+@import './components/Section2.scss';
+@import './components/Section3.scss';
+@import './components/Section4.scss';
+@import './components/Section6.scss';
