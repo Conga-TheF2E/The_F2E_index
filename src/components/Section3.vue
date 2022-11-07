@@ -191,7 +191,7 @@ onMounted(() => {
         <svg
             ref="text_container"
             viewbox="0 0 1200 1200"
-            style="width: 100%; height: 100%"
+            style="width: 1200px; height: 898px"
             class="absolute-center"
         >
             <image
@@ -212,7 +212,7 @@ onMounted(() => {
                 href="../assets/img/2022.svg"
             />
         </svg>
-        <svg viewbox="0 0 1200 1200" style="width: 100%; height: 100%" class="absolute-center">
+        <svg viewbox="0 0 1200 1200" style="width: 1200px; height: 898px" class="absolute-center">
             <g ref="hand_left_container">
                 <image
                     ref="hand_left_icon"
