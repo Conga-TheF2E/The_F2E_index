@@ -1,8 +1,38 @@
+:root {
+    --section3__maxWidth: 1200px;
+    --section3__circleWidth: 898px;
+    --scale: 1;
+}
+@include for-pad {
+    :root {
+        --scale: 0.75;
+    }
+}
+@include for-mobile {
+    :root {
+        --scale: 0.35;
+    }
+}
 .Section3 {
     display: flex;
     justify-content: center;
-    &__FrontUI__circle {
-        width: 898px;
-        height: 898px;
+    overflow: hidden;
+    min-height: 100vh;
+
+    &__scale {
+        transform: scale(var(--scale));
+        transform-origin: center;
+    }
+    &__FrontendUI__circle {
+        width: var(--section3__circleWidth);
+        height: var(--section3__circleWidth);
+    }
+    &__runningText {
+        width: var(--section3__maxWidth);
+        height: var(--section3__circleWidth);
+    }
+    &__hands {
+        width: var(--section3__maxWidth);
+        height: var(--section3__circleWidth);
     }
 }
