@@ -7,23 +7,42 @@ import { ref, onMounted } from 'vue'
 const activityTotalNum = ref(null)
 const attendIndividualCompetitionNum = ref(null)
 const attendTeamCompetitionNum = ref(null)
+const leftHand = ref(null)
+const rightHand = ref(null)
 
 const hoverBox__inner = ref(null)
 let innerBoxAnimation
+let leftHandAnimation
+let rightHandAnimation
 
 function innerBoxAnimationPlay() {
     innerBoxAnimation.play()
+    leftHandAnimation.play()
+    rightHandAnimation.play()
 }
 function innerBoxAnimationReverse() {
     innerBoxAnimation.reverse()
+    leftHandAnimation.reverse()
+    rightHandAnimation.reverse()
 }
 
 onMounted(() => {
     innerBoxAnimation = gsap.fromTo(
         hoverBox__inner.value,
         { width: 0, height: 0 },
-        { width: '110%', height: '110%', duration: 1, paused: true },
+        { width: '110%', height: '110%', duration: 0.5, paused: true },
     )
+    leftHandAnimation = gsap.fromTo(
+        leftHand.value,
+        { x: -200, opacity: 0.2 },
+        { x: 200, opacity: 1, delay: 0.1, duration: 0.5, paused: true },
+    )
+    rightHandAnimation = gsap.fromTo(
+        rightHand.value,
+        { x: 200, opacity: 0.2 },
+        { x: -200, opacity: 1, delay: 0.1, duration: 0.5, paused: true },
+    )
+
     // 數字跳動
     gsap.to(activityTotalNum.value, {
         innerText: 1034,
@@ -63,8 +82,18 @@ onMounted(() => {
         <div class="Section1__hoverBox">
             <div class="Section1__hoverBox__wrapper clip-each--hexagon">
                 <div class="Section1__hoverBox__inner clip-each--hexagon" ref="hoverBox__inner">
-                    <!-- <img class="cat cat_left" :src="HandLeftIcon" alt="hand icon" />
-                    <img class="cat cat_right" :src="HandRightIcon" alt="hand icon" /> -->
+                    <img
+                        class="Section1__hoverBox__inner__leftHand"
+                        src="../assets/img/hand_left.svg"
+                        alt="hand icon"
+                        ref="leftHand"
+                    />
+                    <img
+                        class="Section1__hoverBox__inner__rightHand"
+                        src="../assets/img/hand_right.svg"
+                        alt="hand icon"
+                        ref="rightHand"
+                    />
                 </div>
             </div>
             <div
