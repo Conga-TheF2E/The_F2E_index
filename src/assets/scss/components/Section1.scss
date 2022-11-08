@@ -1,39 +1,48 @@
-// :root {
-//     --offset: 40px;
-//     --box-width: 548px;
-//     --box-height: 475px;
-//   }
+:root {
+    --offset: 40px;
+    --box-width: 548px;
+    --box-height: 475px;
+}
+@media (min-width: 480px) {
+    :root {
+        --font-size: 18px;
+    }
+}
+@include for-pad {
+    :root {
+        --offset: 30px;
+        --box-width: 425px;
+        --box-height: 368px;
+    }
+}
+@include for-mobile {
+    :root {
+        --offset: 10px;
+        --box-width: 207.59px;
+        --box-height: 179.77px;
+    }
+}
 .Section1 {
-    $offset: 40px;
-    $box-width: 548px;
-    $box-height: 475px;
-    $box-width--pad: 425px;
-    $box-height--pad: 368px;
-    $box-width--mobile: 207.59px;
-    $box-height--mobile: 179.77px;
     position: relative;
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
-    padding: $offset;
+    padding: var(--offset);
 
     @include for-pad {
-        $offset: 30px;
         flex-direction: column;
         align-items: center;
-        padding: $offset;
     }
     @include for-mobile {
-        $offset: 15px;
-        padding: $offset;
+        box-sizing: border-box;
     }
 
     &__activityTitle {
         z-index: 10;
         position: absolute;
         top: 50%;
-        left: $offset;
+        left: var(--offset);
         transform: translate(0, -50%);
         cursor: default;
         @include for-pad {
@@ -71,7 +80,7 @@
                 transform-origin: center;
             }
             @include for-mobile {
-                font-size: 41.48px;
+                font-size: 28px;
             }
         }
     }
@@ -79,14 +88,11 @@
     .Section1__hoverBox {
         position: relative;
         @include for-pad {
-            transform: translateY(-0.25 * $box-height--pad);
-        }
-        @include for-mobile {
-            transform: translateY(-0.32 * $box-height--mobile);
+            transform: translateY(calc(-0.25 * var(--box-height)));
         }
         &__wrapper {
-            width: $box-width;
-            height: $box-height;
+            width: var(--box-width);
+            height: var(--box-height);
             background: #4f26e9;
             position: relative;
             overflow: hidden;
@@ -94,32 +100,17 @@
             margin: 60px 0;
             @include for-pad {
                 margin: 0;
-                width: $box-width--pad;
-                height: $box-height--pad;
-            }
-            @include for-mobile {
-                margin: 0;
-                width: $box-width--mobile;
-                height: $box-height--mobile;
             }
         }
         &__controlAnimate__box {
-            width: $box-width;
-            height: $box-height;
+            width: var(--box-width);
+            height: var(--box-height);
             background: transparent;
             position: absolute;
             top: 50%;
             right: 50%;
             transform: translate(50%, -50%);
             z-index: 11;
-            @include for-pad {
-                width: $box-width--pad;
-                height: $box-height--pad;
-            }
-            @include for-mobile {
-                width: $box-width--mobile;
-                height: $box-height--mobile;
-            }
         }
         &__inner {
             background: #d8f34f;
@@ -127,26 +118,22 @@
             top: 50%;
             right: 50%;
             transform: translate(50%, -50%);
-
             overflow: hidden;
         }
     }
 
     &__attendActivityPeople {
         position: absolute;
-        bottom: calc($offset + 7px);
+        bottom: calc(var(--offset) + 7px);
         right: 50%;
         transform: translate(50%, 0);
-        width: calc(100% - $offset * 2);
+        width: calc(100% - var(--offset) * 2);
 
         @include for-pad {
             width: auto;
-            right: $offset;
-            bottom: calc($offset + 7px);
-            transform: translateY(-0.25 * $box-height--pad);
-        }
-        @include for-mobile {
-            transform: translateY(-0.25 * $box-height--mobile);
+            right: var(--offset);
+            bottom: calc(var(--offset) + 7px);
+            transform: translateY(calc(-0.25 * var(--box-height)));
         }
         ul {
             display: flex;
