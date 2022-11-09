@@ -39,7 +39,6 @@ onMounted(() => {
         //以section3作為觸發時機
         trigger: section3.value,
         start: 'top -5%',
-        markers: true,
 
         //向下滾動進入start點時觸發callback
         onEnter: function () {
