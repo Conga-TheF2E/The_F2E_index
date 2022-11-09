@@ -1,12 +1,20 @@
 <script setup>
-// import HandLeftIcon from '../assets/img/hand_left.svg'
-// import HandRightIcon from '../assets/img/hand_right.svg'
 import { gsap } from '../utils/GSAP.js'
 import { ref, onMounted } from 'vue'
 
+// 進場動畫
+const section1 = ref(null)
+const title = ref(null)
+const subtitle = ref(null)
+const hoverBox = ref(null)
+const attendActivityPeople = ref(null)
+
+// 進場動畫
+// 數字跳動
 const activityTotalNum = ref(null)
 const attendIndividualCompetitionNum = ref(null)
 const attendTeamCompetitionNum = ref(null)
+// 數字跳動
 const leftHand = ref(null)
 const rightHand = ref(null)
 
@@ -27,6 +35,25 @@ function innerBoxAnimationReverse() {
 }
 
 onMounted(() => {
+    let elementObjectArray = [
+        { element: title.value, delay: 0.4 },
+        { element: subtitle.value, delay: 0.65 },
+        { element: hoverBox.value, delay: 0.4 },
+        { element: attendActivityPeople.value, delay: 0.4 },
+    ]
+
+    // 淡入效果
+    elementObjectArray.forEach((elementObject) => {
+        const { element, delay } = elementObject
+        gsap.from(element, {
+            x: -50,
+            opacity: 0,
+            duration: 1,
+            delay: delay,
+        })
+    })
+
+    // 準備Hover動畫
     innerBoxAnimation = gsap.fromTo(
         hoverBox__inner.value,
         { width: 0, height: 0 },
@@ -74,12 +101,12 @@ onMounted(() => {
 })
 </script>
 <template>
-    <section class="Section1 container">
+    <section class="Section1 container" ref="section1">
         <div class="Section1__activityTitle">
-            <h1>THE F2E 4TH</h1>
-            <p>互動式網頁設計</p>
+            <h1 ref="title">THE F2E 4TH</h1>
+            <p ref="subtitle">互動式網頁設計</p>
         </div>
-        <div class="Section1__hoverBox">
+        <div class="Section1__hoverBox" ref="hoverBox">
             <div class="Section1__hoverBox__wrapper clip-each--hexagon">
                 <div class="Section1__hoverBox__inner clip-each--hexagon" ref="hoverBox__inner">
                     <img
@@ -111,7 +138,7 @@ onMounted(() => {
                 </defs>
             </svg>
         </div>
-        <div class="Section1__attendActivityPeople">
+        <div class="Section1__attendActivityPeople" ref="attendActivityPeople">
             <ul>
                 <li>
                     <p ref="activityTotalNum">800</p>
