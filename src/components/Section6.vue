@@ -5,14 +5,14 @@ import blockstudio_logo from '../assets/img/blockstudio_logo.svg'
 </script>
 <template>
     <section class="Section6 mb-10">
-        <div class="Section6__title clip-each--Section6_title mb-11">
+        <div class="Section6__title clip-each--Section6_title">
             <h2>
                 區區修練<br class="Section6__title__breakLine" />已經沒辦法滿足了嗎 ?
                 <br />
                 還有比賽等著你 !
             </h2>
         </div>
-        <div class="container" style="padding: 0 40px">
+        <div class="Section6__container container">
             <div class="Section6__competitionFlow">
                 <h3 class="Section6__competitionFlow__title mb-7">評審機制</h3>
                 <ul>
@@ -30,7 +30,7 @@ import blockstudio_logo from '../assets/img/blockstudio_logo.svg'
                 </ul>
             </div>
             <div class="Section6__competitionAwards">
-                <h3 class="Section6__competitionAwards__title mb-7">獎項</h3>
+                <h3 class="Section6__competitionAwards__title">獎項</h3>
                 <ul class="Section6__competitionAwards__content">
                     <li>初選佳作 共六十位<span>|</span>數位獎狀</li>
                     <li>個人企業獎 共六位<span>|</span>NTD 3,000 / 位</li>
@@ -39,7 +39,7 @@ import blockstudio_logo from '../assets/img/blockstudio_logo.svg'
                 <p class="Section6__competitionAwards__note">以上皆提供完賽數位獎狀</p>
             </div>
             <div class="Section6__sponsors">
-                <h3 class="mb-10">贊助單位</h3>
+                <h3 class="Section6__sponsors__title">贊助單位</h3>
 
                 <div class="Section6__sponsor__beehive__wrapper">
                     <div class="Section6__sponsor__beehive clip-each--hexagon">

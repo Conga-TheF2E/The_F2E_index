@@ -5,6 +5,7 @@
         height: 211.37px;
         background: #4f26e9;
         padding: 40px;
+        margin-bottom: 55px;
         margin-left: auto;
 
         h2 {
@@ -35,14 +36,40 @@
                 transform-origin: left;
             }
         }
-    }
 
+        @include for-mobile {
+            padding: 15px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: center;
+            & h2 {
+                transform-origin: center;
+                font-size: 26px;
+                line-height: calc(26px / 1.15965 * 1.5);
+                margin: 0 auto;
+            }
+        }
+    }
+    &__container {
+        box-sizing: border-box;
+        padding: 0 40px;
+        @include for-pad {
+            padding: 0 30px;
+        }
+        @include for-mobile {
+            padding: 0 10px;
+        }
+    }
     &__competitionFlow {
         margin-bottom: 125px;
         @include for-pad {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-bottom: 80px;
+        }
+        @include for-mobile {
+            margin-bottom: 40px;
         }
         &__title {
             display: inline-block;
@@ -54,9 +81,15 @@
             background-color: #4f26e9;
             color: #fff;
             padding: 14px 23px 8px;
+            margin-bottom: 35px;
             @include for-pad {
                 font-size: 37.08px;
                 transform-origin: center;
+            }
+            @include for-mobile {
+                font-size: 20px;
+                padding: 7px 11px 4px;
+                margin-bottom: 17px;
             }
         }
         &__eachFlow {
@@ -81,6 +114,11 @@
                     font-size: 24.03px; //FIXME:
                     transform-origin: center;
                 }
+                @include for-mobile {
+                    font-size: 12.03px; //FIXME:
+                    margin-right: 12px;
+                    padding: 4px 7px 2px;
+                }
             }
             p {
                 line-height: 36px;
@@ -92,10 +130,17 @@
                 @include for-pad {
                     font-size: 24.08px; //FIXME:
                 }
+                @include for-mobile {
+                    font-size: 12px; //FIXME:
+                    line-height: 17px;
+                }
             }
         }
         &__eachFlow + &__eachFlow {
             margin-top: 30px;
+            @include for-mobile {
+                margin-top: 10px;
+            }
         }
     }
     &__competitionAwards {
@@ -103,6 +148,13 @@
         flex-direction: column;
         align-items: center;
         margin-bottom: 170px;
+
+        @include for-pad {
+            margin-bottom: 80px;
+        }
+        @include for-mobile {
+            margin-bottom: 40px;
+        }
         &__title {
             display: inline-block;
             font-size: 36.9597px;
@@ -114,9 +166,12 @@
             padding: 14px 23px 8px;
             @include for-pad {
                 font-size: 37.08px;
+                margin-bottom: 30px;
             }
             @include for-mobile {
-                font-size: 37.16px;
+                font-size: 20px;
+                padding: 7px 11px 4px;
+                margin-bottom: 17px;
             }
         }
         &__content {
@@ -128,21 +183,34 @@
             @include for-pad {
                 font-size: 25.69px;
             }
+            @include for-mobile {
+                font-size: 12px;
+                margin-bottom: 20px;
+            }
             li {
                 position: relative;
                 &::before {
                     content: '#';
                     display: inline-block;
                     margin-right: 12px;
+                    @include for-mobile {
+                        margin-right: 6px;
+                    }
                 }
                 span {
                     display: inline-block;
                     margin: 0 15px;
                     font-weight: 400;
+                    @include for-mobile {
+                        margin: 0 6px;
+                    }
                 }
             }
             li + li {
                 margin-top: 40px;
+                @include for-mobile {
+                    margin-top: 10px;
+                }
             }
         }
         &__note {
@@ -154,12 +222,29 @@
             background-color: #d8f34f;
             color: #1f1f1f;
             padding: 13px 70px 7px;
+            @include for-pad {
+                font-size: 25.69px;
+                padding: 6.5px 35px 3.5px;
+            }
+            @include for-mobile {
+                font-size: 12px;
+                padding: 6.5px 20px 3.5px;
+            }
         }
     }
     &__sponsors {
         display: flex;
         flex-direction: column;
         align-items: center;
+        &__title {
+            margin-bottom: 50px;
+            @include for-pad {
+                margin-bottom: 40px;
+            }
+            @include for-mobile {
+                margin-bottom: 20px;
+            }
+        }
         h3 {
             // display: inline-block;
             font-weight: 900;
@@ -168,6 +253,9 @@
             text-align: center;
             @include for-pad {
                 font-size: 48.91px;
+            }
+            @include for-mobile {
+                font-size: 24px;
             }
         }
     }
@@ -178,9 +266,9 @@
         align-items: center;
     }
 
-    // beehive 下排往上50%
+    // beehive 下排往上48%
     &__sponsors :nth-child(3) {
-        transform: translate(0%, -50%);
+        transform: translate(0%, -48%);
     }
 
     &__sponsor__beehive {
@@ -203,7 +291,10 @@
     &__sponsor__beehive + &__sponsor__beehive {
         margin-left: calc(148px + 26px);
         @include for-pad {
-            margin-left: 150px;
+            margin-left: 155px;
+        }
+        @include for-pad {
+            margin-left: 75px;
         }
     }
 }
