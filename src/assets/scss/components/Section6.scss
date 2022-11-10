@@ -278,6 +278,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        cursor: pointer;
         @include for-pad {
             width: 257.72px;
             height: 223.19px;
@@ -293,8 +294,15 @@
         @include for-pad {
             margin-left: 155px;
         }
-        @include for-pad {
+        @include for-mobile {
             margin-left: 75px;
         }
+    }
+    &__sponsor__beehive:nth-child(1) {
+        z-index: 10;
+    }
+    &__sponsor__beehive:hover {
+        transform: scale(0.85);
+        transform-origin: center;
     }
 }

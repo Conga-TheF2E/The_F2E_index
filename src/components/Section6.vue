@@ -2,17 +2,57 @@
 import kdan_logo from '../assets/img/kdan_logo.svg'
 import titan_logo from '../assets/img/titan_logo.svg'
 import blockstudio_logo from '../assets/img/blockstudio_logo.svg'
+import { ref, onMounted } from 'vue'
+import { gsap } from '../utils/GSAP.js'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
+
+const section6 = ref(null)
+const section6_title = ref(null)
+const section6_body = ref(null)
+
+onMounted(() => {
+    gsap.set(section6.value, { opacity: 0, visibility: 'hidden' })
+    let needInit = false
+
+    // 偵測滾動範圍觸發動畫
+    ScrollTrigger.create({
+        //以section3作為觸發時機
+        trigger: section6.value,
+        start: 'top 15%',
+
+        //向下滾動進入start點時觸發callback
+        onEnter: function () {
+            gsap.set(section6.value, { opacity: 1, visibility: 'visible' })
+            if (!needInit) {
+                needInit = true
+
+                // title淡入
+                gsap.from(section6_title.value, {
+                    x: 100,
+                    y: 100,
+                    opacity: 0,
+                    duration: 0.7,
+                })
+                // title淡入
+                gsap.from(section6_body.value, {
+                    y: 50,
+                    duration: 0.7,
+                })
+            }
+        },
+    })
+})
 </script>
 <template>
-    <section class="Section6 mb-10">
-        <div class="Section6__title clip-each--Section6_title">
+    <section class="Section6 mb-10" ref="section6">
+        <div class="Section6__title clip-each--Section6_title" ref="section6_title">
             <h2>
                 區區修練<br class="Section6__title__breakLine" />已經沒辦法滿足了嗎 ?
                 <br />
                 還有比賽等著你 !
             </h2>
         </div>
-        <div class="Section6__container container">
+        <div class="Section6__container container" ref="section6_body">
             <div class="Section6__competitionFlow">
                 <h3 class="Section6__competitionFlow__title mb-7">評審機制</h3>
                 <ul>
