@@ -1,14 +1,28 @@
+<script setup>
+import { ref, onMounted, watch } from 'vue'
+import { gsap } from '../utils/GSAP.js'
+
+const slider = ref(null)
+
+onMounted(() => {
+    slider.value.addEventListener('change', () => {
+        const currentValue = slider.value.value
+        console.log('currentValue', currentValue)
+    })
+})
+</script>
 <template>
     <section class="Section5">
-
         <div class="date">
-            <div class="pointer"><img src="../assets/img/Section5_left_pointer.svg" alt=""></div>
-            <div class="dateImg1"><img src="../assets/img/page5-1.svg" alt=""></div>
-            <div class="dateImg2" v-show="false"><img src="../assets/img/page5-2.svg" alt=""></div>
-            <div class="pointer"><img src="../assets/img/Section5_right_pointer.svg" alt=""></div>
+            <div class="pointer"><img src="../assets/img/Section5_left_pointer.svg" alt="" /></div>
+            <div class="dateImg1"><img src="../assets/img/page5-1.svg" alt="" /></div>
+            <div class="dateImg2" v-show="false">
+                <img src="../assets/img/page5-2.svg" alt="" />
+            </div>
+            <div class="pointer"><img src="../assets/img/Section5_right_pointer.svg" alt="" /></div>
         </div>
 
-        <input type="range" min="1" max="50" value="1" class="Section5__slider" />
+        <input type="range" min="1" max="50" value="1" class="Section5__slider" ref="slider" />
 
         <ul class="Section5__calendarBar">
             <li>
