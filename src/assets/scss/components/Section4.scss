@@ -11,9 +11,40 @@
     text-align: center;
     color: #f2e8de;
     transform: scaleX(1.15);
+    @include for-pad{
+      display: none;
+    }
+  }
+  .titlePad{
+    font-size: 56px;
+    font-weight: bold;
+    color: #f2e8de;
+    transform: scaleX(1.15);
+    display: none;
+    @include for-pad{
+      display: block;
+    }
   }
   .titleBar {
     margin-top: 17px;
+    @include for-pad{
+      display: none;
+    }
+  }
+  .titleBarPad{
+    display: none;
+    margin-top: 17px;
+    position: relative;
+    @include for-pad{
+      width: 670px;
+      height: 198px;
+      display: block;
+      div{
+        position: absolute;
+        width: auto;
+        height: 66px;
+      }
+    }
   }
   .blockContainer {
     width: 1059px;
@@ -21,14 +52,22 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    .block {
+    @include for-pad{
+      display: block;
       position: relative;
+      width: 652px;
+    }
+    .block {
+      width: 304px;
+      position: relative;
+      @include for-pad{
+        display: none;
+      }
       .outer {
         width: 304px;
         height: 304px;
         border-radius: 100%;
         background-color: #d9f24f;
-        position: relative;
         clip-path: circle(50%);
         .hashtag {
           position: absolute;
@@ -47,10 +86,9 @@
           transform: translate(-50%, 0%);
         }
         .inner {
-          // display: none;
           position: absolute;
-          width: 100px;
-          height: 100px;
+          width: 0px;
+          height: 0px;
           border-radius: 100%;
           background-color: #4f26e9;
           clip-path: circle(50%);
@@ -82,7 +120,7 @@
           transform: translate(0%, -50%);
         }
         .innerBar {
-          width: 100px;
+          width: 0px;
           height: 41px;
           background-color: #f2e8de;
           position: absolute;
@@ -98,6 +136,18 @@
             transform: translate(-50%, -50%);
           }
         }
+      }
+    }
+    .blockPad{
+      @include for-pad{
+        display: flex;
+      }
+      display: none;
+      align-items: center;
+      justify-content: space-around;
+      margin-top: 22px;
+      p{
+        font-size: 27px;
       }
     }
   }
