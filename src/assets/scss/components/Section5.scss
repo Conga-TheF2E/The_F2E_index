@@ -1,5 +1,18 @@
 .Section5 {
     padding: 40px;
+
+    .date{
+        width: 1082px;
+        height: 245px;
+        margin: 137px auto 55px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .pointer{
+            cursor: pointer;
+        }
+    }
+
     &__slider {
         -webkit-appearance: none;
         width: 100%;
