@@ -48,6 +48,7 @@
   }
   .blockContainer {
     width: 1059px;
+    height: 304px;
     margin-top: 56px;
     display: flex;
     flex-direction: row;
@@ -56,53 +57,72 @@
       display: block;
       position: relative;
       width: 652px;
+      height: 1270px;
     }
     .block {
       width: 304px;
+      height: 304px;
       position: relative;
       @include for-pad{
         display: none;
       }
+      .mask{
+        position: absolute;
+        width: 304px;
+        height: 304px;
+        border-radius: 100%;
+        background-color: transparent;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        clip-path: circle(50%);
+        z-index: 1000;
+      }
       .outer {
+        position: absolute;
         width: 304px;
         height: 304px;
         border-radius: 100%;
         background-color: #d9f24f;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
         clip-path: circle(50%);
-        .hashtag {
+      }
+      
+      .hashtag {
+        position: absolute;
+        width: 130px;
+        height: 29px;
+        top: 45px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+      .outerContent {
+        position: absolute;
+        width: 254px;
+        height: 79px;
+        top: 112px;
+        left: 50%;
+        transform: translate(-50%, 0%);
+      }
+      .inner {
+        position: absolute;
+        width: 0px;
+        height: 0px;
+        border-radius: 100%;
+        background-color: #4f26e9;
+        clip-path: circle(50%);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        .innerContent {
           position: absolute;
-          width: 130px;
+          width: 207px;
           height: 29px;
-          top: 45px;
-          left: 50%;
-          transform: translate(-50%, 0%);
-        }
-        .outerContent {
-          position: absolute;
-          width: 254px;
-          height: 79px;
-          top: 112px;
-          left: 50%;
-          transform: translate(-50%, 0%);
-        }
-        .inner {
-          position: absolute;
-          width: 0px;
-          height: 0px;
-          border-radius: 100%;
-          background-color: #4f26e9;
-          clip-path: circle(50%);
           top: 50%;
           left: 50%;
           transform: translate(-50%, -50%);
-          .innerContent {
-            position: absolute;
-            width: 207px;
-            height: 29px;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          }
         }
       }
       .outerBar {
@@ -112,9 +132,14 @@
         position: absolute;
         left: -25px;
         bottom: 46px;
+        overflow: hidden;
         p {
           font-family: "OTF_Glusp";
           position: relative;
+          font-size: 27px;
+          width: 185px;
+          height: 19px;
+          left: 8px;
           top: 50%;
           text-align: center;
           transform: translate(0%, -50%);
