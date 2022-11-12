@@ -113,15 +113,15 @@ onMounted(() => {
             <li></li>
             <li></li>
             <li></li>
-            <li class="Section5__calendarBar__item"></li>
-            <li class="Section5__calendarBar__item"></li>
-            <li class="Section5__calendarBar__item"></li>
-            <li class="Section5__calendarBar__item"></li>
-            <li class="Section5__calendarBar__item"></li>
-            <li class="Section5__calendarBar__item"></li>
-            <li class="Section5__calendarBar__item"></li>
-            <li class="Section5__calendarBar__item"></li>
-            <li class="Section5__calendarBar__item">
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li>
                 <p>Nov.</p>
                 <p>29</p>
             </li>
@@ -133,7 +133,9 @@ onMounted(() => {
                 <p>Oct.</p>
                 <p>13</p>
             </li>
-            <li style="flex: calc(17 + (8 / 20))">報名時間</li>
+            <li style="flex: calc(17 + (8 / 20))">
+                <img src="../assets/img/報名時間.svg" style="width: 95px" />
+            </li>
 
             <li>
                 <p>Oct.</p>
@@ -144,7 +146,9 @@ onMounted(() => {
                 <p>13</p>
             </li>
 
-            <li style="flex: calc(27 + (24 / 20))">開賽 / 登入作品</li>
+            <li style="flex: calc(27 + (24 / 20))">
+                <img src="../assets/img/開賽登錄作品.svg" style="width: 168px" />
+            </li>
 
             <li>
                 <p>Nov.</p>

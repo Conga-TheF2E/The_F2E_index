@@ -20,6 +20,7 @@
         background: white;
         outline: none;
         position: relative;
+        margin-bottom: 31px;
         &::-webkit-slider-thumb {
             -webkit-appearance: none;
             appearance: none;
@@ -69,6 +70,7 @@
             flex-direction: column;
             justify-content: center;
             text-align: center;
+            align-items: center;
             background: #4f26e9;
             font-family: 'MPLUS1p-Medium';
             font-weight: 700;
@@ -89,7 +91,7 @@
     }
 
     &__calendarBar + &__calendarBar {
-        margin-top: 10px;
+        margin-top: 1px;
         li {
             background: #d9f24f;
             color: #1f1f1f;
