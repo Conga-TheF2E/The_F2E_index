@@ -34,6 +34,7 @@ function addAnimateToCircle(element, name, toValue) {
 
 onMounted(() => {
     gsap.set(section3.value, { opacity: 0, visibility: 'hidden' })
+    RunningText()
     // 偵測滾動範圍觸發動畫
     ScrollTrigger.create({
         //以section3作為觸發時機
@@ -43,7 +44,6 @@ onMounted(() => {
         //向下滾動進入start點時觸發callback
         onEnter: function () {
             gsap.set(section3.value, { opacity: 1, visibility: 'visible' })
-            // 除跑馬燈外，僅創建一次動畫
             if (!needInit) {
                 needInit = true
                 addAnimateToCircle(outer_circle.value, 'outer_circle', '1745, 1745')
@@ -113,32 +113,32 @@ onMounted(() => {
                 })
                 // 手手抖動
             }
-            RunningText()
-        },
-
-        // //向下滾動超過end點時觸發callback
-        // onLeave: function () {
-        //     hide(box2)
-        // },
-
-        //向上滾動超過end點時觸發（回滾時觸發）callback
-        onEnterBack: function () {
-            RunningText()
         },
     })
 
     // 文字跑馬燈
     function RunningText() {
-        const container_height = text_container.value.getBoundingClientRect().height
-        gsap.fromTo(
+        const container_height = section3.value.getBoundingClientRect().height
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: text_container.value, // 決定scrolltrigger要以哪一個元素作為觸發基準點
+                markers: true, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
+                start: 'top 10%', // 決定動畫開始點的位置
+                end: 'top -65%', // 決定動畫結束點的位置
+                scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
+            },
+        })
+
+        tl.fromTo(
             text_F2E.value,
-            { y: container_height * 1.2 },
-            { y: -1.5 * container_height, duration: 1.7, ease: 'none' },
+            { y: container_height * 0.3 },
+            { y: -0.8 * container_height, ease: 'none' },
         )
-        gsap.fromTo(
+        tl.fromTo(
             text_2022.value,
-            { y: container_height * 1.2 },
-            { y: -1.5 * container_height, duration: 1.7, ease: 'none', delay: 1 },
+            { y: container_height * 0.7 },
+            { y: -0.8 * container_height, ease: 'none' },
         )
     }
 })
