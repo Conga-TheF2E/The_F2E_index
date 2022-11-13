@@ -115,13 +115,14 @@ function barLeave3() {
         <div class="titleBar"><img src="../assets/img/各路廠商.svg" alt=""></div>
         <div class="titleBarPad">
             <div><img src="../assets/img/Section4PadTitlebar1.svg" alt=""></div>
-            <div style="top: 66px; left: 50%; transform: translate(-50%, 0%)"><img
+            <div style="top: 50%; left: 50%; transform: translate(-50%, -50%)"><img
                     src="../assets/img/Section4PadTitlebar2.svg" alt=""></div>
             <div style="bottom: 0px; right: 0px"><img src="../assets/img/Section4PadTitlebar3.svg" alt=""></div>
         </div>
         <div class="blockContainer">
             <div id="block1" class="block">
-                <div class="mask" @mouseover="enter1(), barEnter1()" @mouseleave="leave1(), barLeave1()"></div>
+                <a href="https://2022.thef2e.com/news/week1" class="mask" @mouseover="enter1(), barEnter1()"
+                    @mouseleave="leave1(), barLeave1()"></a>
                 <div class="outer">
                 </div>
                 <div class="hashtag">
@@ -142,7 +143,8 @@ function barLeave3() {
 
             </div>
             <div id="block2" class="block">
-                <div class="mask" @mouseover="enter2(), barEnter2()" @mouseleave="leave2(), barLeave2()"></div>
+                <a href="https://2022.thef2e.com/news/week2" class="mask" @mouseover="enter2(), barEnter2()"
+                    @mouseleave="leave2(), barLeave2()"></a>
                 <div class="outer">
                 </div>
                 <div class="hashtag">
@@ -162,7 +164,8 @@ function barLeave3() {
                 </div>
             </div>
             <div id="block3" class="block">
-                <div class="mask" @mouseover="enter3(), barEnter3()" @mouseleave="leave3(), barLeave3()"></div>
+                <a href="https://2022.thef2e.com/news/week3" class="mask" @mouseover="enter3(), barEnter3()"
+                    @mouseleave="leave3(), barLeave3()"></a>
                 <div class="outer">
                     <div class="hashtag" style="width:174px;">
                         <img src="../assets/img/hashtag_3.svg" alt="">
@@ -185,8 +188,10 @@ function barLeave3() {
             </div>
             <!--for pad-->
             <div class="blockPad">
-                <img src="../assets/img/Section4BlockPad1.svg" alt="">
-                <img src="../assets/img/Section4PointerLeftPad.svg" alt="">
+                <a href="https://2022.thef2e.com/news/week1">
+                    <img class="outerPad" src="../assets/img/Section4BlockPad1.svg" alt="">
+                </a>
+                <img class="pointerPad" src="../assets/img/Section4PointerLeftPad.svg" alt="">
                 <p>
                     點擊查看<br>
                     關卡資訊
@@ -197,12 +202,16 @@ function barLeave3() {
                     點擊查看<br>
                     關卡資訊
                 </p>
-                <img src="../assets/img/Section4PointerLeftPad.svg" alt="">
-                <img src="../assets/img/Section4BlockPad1.svg" alt="">
+                <a href="https://2022.thef2e.com/news/week1"><img class="pointerPad"
+                        src="../assets/img/Section4PointerRightPad.svg" alt="">
+                </a>
+                <img class="outerPad" src="../assets/img/Section4BlockPad2.svg" alt="">
             </div>
             <div class="blockPad">
-                <img src="../assets/img/Section4BlockPad1.svg" alt="">
-                <img src="../assets/img/Section4PointerLeftPad.svg" alt="">
+                <a href="https://2022.thef2e.com/news/week1"><img class="outerPad"
+                        src="../assets/img/Section4BlockPad3.svg" alt="">
+                </a>
+                <img class="pointerPad" src="../assets/img/Section4PointerLeftPad.svg" alt="">
                 <p>
                     點擊查看<br>
                     關卡資訊
