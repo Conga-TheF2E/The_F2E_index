@@ -80,7 +80,7 @@ function posterDisappear() {
     <section class="Section5">
         <div class="poster forPc">
             <div class="posterMask" v-on:click="posterDisappear()"></div>
-            <img src="../assets/img/海報 1.svg" alt="" />
+            <img src="../assets/img/海報1.svg" alt="" />
         </div>
         <div class="date forPc">
             <div class="pointer pointer1">
@@ -173,7 +173,7 @@ function posterDisappear() {
                 <p>Oct.</p>
                 <p>13</p>
             </li>
-            <li style="flex: calc(17 + (8 / 20))">
+            <li style="flex: calc(17 + (3 / 20))">
                 <img src="../assets/img/報名時間.svg" style="width: 95px" />
             </li>
 
@@ -186,7 +186,7 @@ function posterDisappear() {
                 <p>31</p>
             </li>
 
-            <li style="flex: calc(27 + (24 / 20))">
+            <li style="flex: calc(27 + (15 / 20))">
                 <img src="../assets/img/開賽登錄作品.svg" style="width: 168px" />
             </li>
 
