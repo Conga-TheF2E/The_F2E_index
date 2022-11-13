@@ -18,7 +18,7 @@ onMounted(() => {
     ScrollTrigger.create({
         //以section3作為觸發時機
         trigger: section6.value,
-        start: 'top 15%',
+        start: 'top 8%',
 
         //向下滾動進入start點時觸發callback
         onEnter: function () {
