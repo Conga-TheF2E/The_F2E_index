@@ -11,41 +11,72 @@
     text-align: center;
     color: #f2e8de;
     transform: scaleX(1.15);
-    @include for-pad{
+
+    @include for-pad {
       display: none;
     }
   }
-  .titlePad{
+
+  .titlePad {
     font-size: 56px;
     font-weight: bold;
     color: #f2e8de;
     transform: scaleX(1.15);
     display: none;
-    @include for-pad{
+
+    @include for-pad {
       display: block;
     }
+
+    @include for-mobile {
+      display: block;
+      font-size: 26px;
+    }
   }
+
   .titleBar {
     margin-top: 17px;
-    @include for-pad{
+
+    @include for-pad {
       display: none;
     }
   }
-  .titleBarPad{
+
+  .titleBarPad {
     display: none;
     margin-top: 17px;
     position: relative;
-    @include for-pad{
+
+    @include for-pad {
       width: 670px;
       height: 198px;
       display: block;
-      div{
+
+      div {
         position: absolute;
         width: auto;
         height: 66px;
       }
     }
+
+    @include for-mobile {
+      width: 327px;
+      height: 96px;
+      display: block;
+
+      div {
+        position: absolute;
+        width: auto;
+        height: 32px;
+
+        img {
+          width: 229px;
+          height: 32px;
+        }
+      }
+    }
   }
+
   .blockContainer {
     width: 1059px;
     height: 304px;
@@ -53,20 +84,33 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    @include for-pad{
+
+    @include for-pad {
       display: block;
       position: relative;
       width: 652px;
       height: 1270px;
     }
+
+    @include for-mobile {
+      width: 100%;
+      height: auto;
+    }
+
     .block {
       width: 304px;
       height: 304px;
       position: relative;
-      @include for-pad{
+
+      @include for-pad {
         display: none;
       }
-      .mask{
+
+      @include for-mobile {
+        display: none;
+      }
+
+      .mask {
         position: absolute;
         width: 304px;
         height: 304px;
@@ -78,6 +122,7 @@
         clip-path: circle(50%);
         z-index: 1000;
       }
+
       .outer {
         position: absolute;
         width: 304px;
@@ -89,7 +134,7 @@
         transform: translate(-50%, -50%);
         clip-path: circle(50%);
       }
-      
+
       .hashtag {
         position: absolute;
         width: 130px;
@@ -98,6 +143,7 @@
         left: 50%;
         transform: translate(-50%, 0%);
       }
+
       .outerContent {
         position: absolute;
         width: 254px;
@@ -106,6 +152,7 @@
         left: 50%;
         transform: translate(-50%, 0%);
       }
+
       .inner {
         position: absolute;
         width: 0px;
@@ -116,6 +163,7 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+
         .innerContent {
           position: absolute;
           width: 207px;
@@ -125,6 +173,7 @@
           transform: translate(-50%, -50%);
         }
       }
+
       .outerBar {
         width: 198px;
         height: 41px;
@@ -133,6 +182,7 @@
         left: -25px;
         bottom: 46px;
         overflow: hidden;
+
         p {
           font-family: "OTF_Glusp";
           position: relative;
@@ -144,6 +194,7 @@
           text-align: center;
           transform: translate(0%, -50%);
         }
+
         .innerBar {
           width: 0px;
           height: 41px;
@@ -152,6 +203,7 @@
           top: 0;
           left: 0%;
           overflow: hidden;
+
           .innerBarContent {
             width: 106px;
             height: 20px;
@@ -163,16 +215,36 @@
         }
       }
     }
-    .blockPad{
-      @include for-pad{
-        display: flex;
-      }
+
+    .blockPad {
       display: none;
       align-items: center;
       justify-content: space-around;
-      margin-top: 22px;
-      p{
+      margin: 22px auto 0px;
+
+      p {
         font-size: 27px;
+      }
+
+      @include for-pad {
+        display: flex;
+      }
+
+      @include for-mobile {
+        display: flex;
+        width: 300px;
+
+        p {
+          font-size: 14px;
+        }
+
+        .outerPad {
+          width: 215px;
+        }
+
+        .pointerPad {
+          width: 11px
+        }
       }
     }
   }

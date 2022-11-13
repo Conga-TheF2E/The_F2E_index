@@ -1,25 +1,47 @@
-.navbar{
+.navbar {
     height: 90px;
     width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
     a {
-        width:106px; 
+        width: 106px;
         height: 35px;
         text-align: center;
-        line-height:35px;
+        line-height: 35px;
         font-size: 18px;
         font-weight: 700;
-        text-decoration:none;
+        text-decoration: none;
     }
-    .info{
+
+    .info {
         margin-right: 30px;
         color: #F2E8DE;
     }
-    .signUp{
+
+    .signUp {
         background-color: #D9F24F;
         color: #1F1F1F;
-        margin-right: 42px ;
+        margin-right: 42px;
+    }
+
+    @include for-mobile {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        height: 41px;
+        z-index: 10000;
+
+        .info {
+            display: none;
+        }
+
+        .signUp {
+            font-size: 24px;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
     }
 }
