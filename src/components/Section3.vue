@@ -39,7 +39,7 @@ onMounted(() => {
     ScrollTrigger.create({
         //以section3作為觸發時機
         trigger: section3.value,
-        start: 'top 10%',
+        start: 'top 30%',
 
         //向下滾動進入start點時觸發callback
         onEnter: function () {
@@ -124,7 +124,7 @@ onMounted(() => {
             scrollTrigger: {
                 trigger: text_container.value, // 決定scrolltrigger要以哪一個元素作為觸發基準點
                 // markers: true, // 開啟start & end標記點，單純方便瀏覽動畫開始與結束點
-                start: 'top 10%', // 決定動畫開始點的位置
+                start: 'top 40%', // 決定動畫開始點的位置
                 end: 'top -65%', // 決定動畫結束點的位置
                 scrub: true, //重要！開啟scrub來決定動畫播放是否依賴視窗滾動
             },
@@ -132,13 +132,14 @@ onMounted(() => {
 
         tl.fromTo(
             text_F2E.value,
-            { y: container_height * 0.3 },
+            { y: container_height * 0.2 },
             { y: -0.8 * container_height, ease: 'none' },
         )
         tl.fromTo(
             text_2022.value,
-            { y: container_height * 0.7 },
+            { y: container_height * 0.9 },
             { y: -0.8 * container_height, ease: 'none' },
+            "<"
         )
     }
 })
@@ -147,97 +148,38 @@ onMounted(() => {
     <section class="Section3 position-relative" ref="section3">
         <div class="Section3__scale">
             <svg class="Section3__FrontendUI__circle" viewbox="0 0 898 898" fill="none">
-                <circle
-                    ref="outer_circle"
-                    cx="449"
-                    cy="449"
-                    r="277"
-                    stroke="#D9F24F"
-                    data-fallback="edge"
-                    stroke-width="340px"
-                    transform="rotate(-90, 449, 449)"
-                    stroke-dasharray="0, 1745"
-                ></circle>
+                <circle ref="outer_circle" cx="449" cy="449" r="277" stroke="#D9F24F" data-fallback="edge"
+                    stroke-width="340px" transform="rotate(-90, 449, 449)" stroke-dasharray="0, 1745"></circle>
 
-                <circle
-                    ref="inner_circle"
-                    cx="449"
-                    cy="449"
-                    r="85"
-                    stroke="#D9F24F"
-                    data-fallback="edge"
-                    stroke-width="8px"
-                    transform="rotate(-90, 449, 449)"
-                    stroke-dasharray="0, 536"
-                >
+                <circle ref="inner_circle" cx="449" cy="449" r="85" stroke="#D9F24F" data-fallback="edge"
+                    stroke-width="8px" transform="rotate(-90, 449, 449)" stroke-dasharray="0, 536">
                     <!-- stroke-dasharray = ( r * 2 ) * 3.14159 -->
                 </circle>
 
-                <image
-                    ref="circle_text"
-                    x="125"
-                    y="126"
-                    width="648"
-                    height="646"
-                    href="../assets/img/circle_text.svg"
-                />
-                <image
-                    ref="bulb_icon"
-                    x="411"
-                    y="400"
-                    width="76"
-                    height="99"
-                    href="../assets/img/bulb.svg"
-                />
+                <image ref="circle_text" x="125" y="126" width="648" height="646"
+                    href="../assets/img/circle_text.svg" />
+                <image ref="bulb_icon" x="411" y="400" width="76" height="99" href="../assets/img/bulb.svg" />
             </svg>
 
-            <svg
-                ref="text_container"
-                viewbox="0 0 1200 898"
-                class="Section3__runningText absolute-center"
-                v-show="windowWidth > 1200"
-            >
-                <image
-                    ref="text_F2E"
-                    x="55"
-                    y="468.5"
-                    width="55"
-                    height="263"
-                    href="../assets/img/F2E.svg"
-                />
+            <svg ref="text_container" viewbox="0 0 1200 898" class="Section3__runningText absolute-center"
+                v-show="windowWidth > 1200">
+                <image ref="text_F2E" x="55" y="468.5" width="55" height="263" href="../assets/img/F2E.svg" />
 
-                <image
-                    ref="text_2022"
-                    x="1090"
-                    y="205"
-                    width="55"
-                    height="415"
-                    href="../assets/img/2022.svg"
-                />
+                <image ref="text_2022" x="1090" y="205" width="55" height="415" href="../assets/img/2022.svg" />
             </svg>
             <svg viewbox="0 0 1200 898" class="Section3__hands absolute-center">
                 <g ref="hand_left_container">
-                    <image
-                        ref="hand_left_icon"
-                        x="0"
-                        y="205"
-                        width="548"
-                        height="399"
-                        href="../assets/img/hand_left.svg"
-                    />
+                    <image ref="hand_left_icon" x="0" y="205" width="548" height="399"
+                        href="../assets/img/hand_left.svg" />
                 </g>
                 <g ref="hand_right_container">
-                    <image
-                        ref="hand_right_icon"
-                        x="665"
-                        y="175"
-                        width="540"
-                        height="459"
-                        href="../assets/img/hand_right.svg"
-                    />
+                    <image ref="hand_right_icon" x="665" y="175" width="540" height="459"
+                        href="../assets/img/hand_right.svg" />
                 </g>
             </svg>
         </div>
     </section>
 </template>
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+
+</style>
