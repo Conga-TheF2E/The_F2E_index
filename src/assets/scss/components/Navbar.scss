@@ -17,13 +17,15 @@
 
     .info {
         margin-right: 30px;
-        color: #F2E8DE;
+        color: #f2e8de;
+        cursor: url('../img/mousePointer.svg') 16 16, pointer;
     }
 
     .signUp {
-        background-color: #D9F24F;
-        color: #1F1F1F;
+        background-color: #d9f24f;
+        color: #1f1f1f;
         margin-right: 42px;
+        cursor: url('../img/mousePointer.svg') 16 16, pointer;
     }
 
     @include for-mobile {

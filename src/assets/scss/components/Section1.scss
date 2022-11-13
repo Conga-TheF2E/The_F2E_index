@@ -44,7 +44,6 @@
         top: 50%;
         left: var(--offset);
         transform: translate(0, -50%);
-        cursor: default;
         @include for-pad {
             display: flex;
             flex-direction: column;
