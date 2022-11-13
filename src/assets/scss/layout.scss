@@ -2,6 +2,10 @@ body {
     font-family: 'GenSekiGothic', Arial, Helvetica, sans-serif;
     background: #1f1f1f;
     color: #fff;
+
+    @include for-mobile {
+        margin-bottom: 40px;
+    }
 }
 .container {
     margin: 0 auto;

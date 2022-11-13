@@ -6,6 +6,7 @@ import Section3 from './components/Section3.vue'
 import Section4 from './components/Section4.vue'
 import Section5 from './components/Section5.vue'
 import Section6 from './components/Section6.vue'
+import MobileFooter from './components/MobileFooter.vue'
 </script>
 
 <template>
@@ -17,9 +18,8 @@ import Section6 from './components/Section6.vue'
         <Section4 />
         <Section5 />
         <Section6 />
+        <MobileFooter />
     </section>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
