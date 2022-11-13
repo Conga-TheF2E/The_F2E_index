@@ -3,6 +3,8 @@ body {
     background: #1f1f1f;
     color: #fff;
 
+    cursor: url('../img/mouseDefault.svg') 16 16, auto;
+
     @include for-mobile {
         margin-bottom: 40px;
     }

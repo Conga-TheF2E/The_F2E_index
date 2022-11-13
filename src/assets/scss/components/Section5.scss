@@ -9,7 +9,7 @@
         justify-content: space-between;
         align-items: center;
         .pointer {
-            cursor: pointer;
+            cursor: url('../img/mousePointer.svg') 16 16, pointer;
         }
     }
 
@@ -28,7 +28,7 @@
             height: 22px;
             background-image: url('/public/image/日期拉霸.svg');
             background-size: 100% 100%;
-            cursor: pointer;
+            cursor: url('../img/mousePointer.svg') 16 16, pointer;
         }
 
         &::-moz-range-thumb {
@@ -36,7 +36,7 @@
             height: 25px;
             background-image: url('/public/image/日期拉霸.svg');
             background-size: 100% 100%;
-            cursor: pointer;
+            cursor: url('../img/mousePointer.svg') 16 16, pointer;
         }
 
         &::before {

@@ -279,7 +279,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        cursor: pointer;
         transition: all 0.25s ease-in-out;
         @include for-pad {
             width: 257.72px;
@@ -289,6 +288,9 @@
             width: 125.84px;
             height: 108.99px;
         }
+    }
+    .beehive-mask {
+        cursor: url('../img/mousePointer.svg') 16 16, pointer;
     }
 
     .beehive-mask + .beehive-mask {
