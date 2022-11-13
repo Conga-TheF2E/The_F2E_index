@@ -62,17 +62,17 @@ onMounted(() => {
     leftHandAnimation = gsap.fromTo(
         leftHand.value,
         { x: -200, opacity: 0.2 },
-        { x: 200, opacity: 1, delay: 0.1, duration: 0.5, paused: true },
+        { x: 200, opacity: 1, delay: 0.05, duration: 0.5, paused: true },
     )
     rightHandAnimation = gsap.fromTo(
         rightHand.value,
         { x: 200, opacity: 0.2 },
-        { x: -200, opacity: 1, delay: 0.1, duration: 0.5, paused: true },
+        { x: -200, opacity: 1, delay: 0.05, duration: 0.5, paused: true },
     )
 
     // 數字跳動
     gsap.to(activityTotalNum.value, {
-        innerText: 1034,
+        innerText: 1079,
         duration: 4,
         snap: {
             innerText: 1,
@@ -81,7 +81,7 @@ onMounted(() => {
         ease: 'Circ.easeOut',
     })
     gsap.to(attendIndividualCompetitionNum.value, {
-        innerText: 999,
+        innerText: 977,
         duration: 4,
         snap: {
             innerText: 1,
@@ -90,7 +90,7 @@ onMounted(() => {
         ease: 'Circ.easeOut',
     })
     gsap.to(attendTeamCompetitionNum.value, {
-        innerText: 33,
+        innerText: 39,
         duration: 4,
         snap: {
             innerText: 1,
