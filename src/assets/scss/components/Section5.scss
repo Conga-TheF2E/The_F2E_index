@@ -62,7 +62,7 @@
             top: 28px;
             right: 19px;
             z-index: 110;
-            cursor: pointer;
+            cursor: url('../img/mousePointer.svg') 16 16, pointer;
         }
     }
 
@@ -85,7 +85,7 @@
         .moreComp {
             position: absolute;
             bottom: 0;
-            cursor: pointer;
+            cursor: url('../img/mousePointer.svg') 16 16, pointer;
         }
 
         .pointer1 {

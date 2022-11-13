@@ -43,6 +43,22 @@ onMounted(() => {
                     width: "0px",
                     duration: 1,
                 })
+                gsap.from('.titlePad', {
+                    y: -100,
+                    opacity: 0,
+                    duration: 0.7
+                })
+                gsap.from('.titleBarPad', {
+                    y: -100,
+                    opacity: 0,
+                    duration: 0.7,
+                    delay: 0.7
+                })
+                gsap.from('.blockPad', {
+                    opacity: 0,
+                    duration: 0.7,
+                    delay: 1.4
+                })
             }
         },
     })
