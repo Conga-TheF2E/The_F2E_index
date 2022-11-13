@@ -82,7 +82,7 @@ function posterDisappear() {
 <template>
     <section class="Section5">
         <div class="poster forPc">
-            <div class="posterMask" v-on:click="posterDisappear()"></div><img src="../assets/img/海報 1.svg" alt="">
+            <div class="posterMask" v-on:click="posterDisappear()"></div><img src="../assets/img/海報1.svg" alt="">
         </div>
         <div class="date forPc">
             <div class="pointer pointer1"><img src="../assets/img/Section5_left_pointer.svg" alt="" /></div>
