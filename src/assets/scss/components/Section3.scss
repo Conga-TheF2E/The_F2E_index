@@ -16,8 +16,11 @@
 .Section3 {
     display: flex;
     justify-content: center;
+    align-items: center;
     overflow: hidden;
-    min-height: 100vh;
+    @include for-pad {
+        max-height: 150vw;
+    }
 
     &__scale {
         transform: scale(var(--scale));
