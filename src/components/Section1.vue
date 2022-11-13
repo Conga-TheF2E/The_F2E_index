@@ -72,7 +72,7 @@ onMounted(() => {
 
     // 數字跳動
     gsap.to(activityTotalNum.value, {
-        innerText: 1079,
+        innerText: 1340,
         duration: 4,
         snap: {
             innerText: 1,
@@ -81,7 +81,7 @@ onMounted(() => {
         ease: 'Circ.easeOut',
     })
     gsap.to(attendIndividualCompetitionNum.value, {
-        innerText: 977,
+        innerText: 1218,
         duration: 4,
         snap: {
             innerText: 1,
@@ -90,7 +90,7 @@ onMounted(() => {
         ease: 'Circ.easeOut',
     })
     gsap.to(attendTeamCompetitionNum.value, {
-        innerText: 39,
+        innerText: 47,
         duration: 4,
         snap: {
             innerText: 1,
