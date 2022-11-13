@@ -75,6 +75,18 @@ function posterAppear() {
 function posterDisappear() {
     gsap.to('.poster', { width: '0px', height: '0px', duration: 0.5 })
 }
+
+function clickToNextEvent() {
+    const currentValue = Number(slider.value.value)
+    if (currentValue <= 19) {
+        slider.value.value = 20
+    }
+    if (currentValue > 19) {
+        slider.value.value = 1
+    }
+
+    slider.value.dispatchEvent(new Event('input'))
+}
 </script>
 <template>
     <section class="Section5">
@@ -83,7 +95,7 @@ function posterDisappear() {
             <img src="../assets/img/海報1.svg" alt="" />
         </div>
         <div class="date forPc">
-            <div class="pointer pointer1">
+            <div class="pointer pointer1" @click="clickToNextEvent('next')">
                 <img src="../assets/img/Section5_left_pointer.svg" alt="" />
             </div>
             <div class="dateImg dateImg1"><img src="../assets/img/page5-1.svg" alt="" /></div>
@@ -93,7 +105,7 @@ function posterDisappear() {
                 </div>
                 <img src="../assets/img/page5-2.svg" alt="" />
             </div>
-            <div class="pointer pointer2">
+            <div class="pointer pointer2" @click="clickToNextEvent('previous')">
                 <img src="../assets/img/Section5_right_pointer.svg" alt="" />
             </div>
         </div>
