@@ -1,7 +1,21 @@
-# Vue 3 + Vite
+# The_F2E_index
 
-This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+![](https://i.imgur.com/U9h0LGZ.png)
 
-## Recommended IDE Setup
+## 歡迎至 Demo 網站觀看
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar)
+更多細節請至 [Demo 網站](https://conga-thef2e.github.io/The_F2E_index/) 觀看!
+
+## 專案說明
+
+---
+
+-   主要使用 `Vue.js` 和 `Vite` 架設而成
+-   動態效果大多使用 `GSAP`
+
+## 使用技術
+
+-   Vue3
+-   Vite
+-   SCSS
+-   GSAP
