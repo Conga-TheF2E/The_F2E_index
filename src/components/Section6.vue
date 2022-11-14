@@ -82,20 +82,29 @@ onMounted(() => {
                 <h3 class="Section6__sponsors__title">贊助單位</h3>
 
                 <div class="Section6__sponsor__beehive__wrapper">
-                    <div class="beehive-mask">
+                    <div
+                        class="beehive-mask"
+                        onclick="window.open('https://titansoft.com/tw','titansoft');"
+                    >
                         <div class="Section6__sponsor__beehive clip-each--hexagon">
                             <img style="width: 55%" :src="titan_logo" alt="鈦坦科技" />
                         </div>
                     </div>
                 </div>
                 <div class="Section6__sponsor__beehive__wrapper">
-                    <div class="beehive-mask">
+                    <div
+                        class="beehive-mask"
+                        onclick="window.open('https://www.kdanmobile.com/zh-tw','kdanmobile');"
+                    >
                         <div class="Section6__sponsor__beehive clip-each--hexagon">
                             <img style="width: 55%" :src="kdan_logo" alt="凱鈿行動科技" />
                         </div>
                     </div>
 
-                    <div class="beehive-mask">
+                    <div
+                        class="beehive-mask"
+                        onclick="window.open('https://blockstudio.tw/','blockstudio');"
+                    >
                         <div class="Section6__sponsor__beehive clip-each--hexagon">
                             <img style="width: 55%" :src="blockstudio_logo" alt="板塊設計" />
                         </div>
