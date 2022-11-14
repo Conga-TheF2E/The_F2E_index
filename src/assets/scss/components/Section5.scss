@@ -51,7 +51,7 @@
 
         img {
             width: 100%;
-            height: 100%
+            height: 100%;
         }
 
         .posterMask {
@@ -91,14 +91,14 @@
         .pointer1 {
             position: absolute;
             top: 45%;
-            transform: translate(0%, -50%)
+            transform: translate(0%, -50%);
         }
 
         .pointer2 {
             position: absolute;
             top: 45%;
             right: 0px;
-            transform: translate(0%, -50%)
+            transform: translate(0%, -50%);
         }
     }
 
@@ -166,18 +166,16 @@
             text-align: center;
             align-items: center;
             background: #4f26e9;
-            font-family: 'MPLUS1p-Medium';
+            font-family: 'm-plus-1p';
             font-weight: 700;
             border-left: 1px solid #1f1f1f;
             box-sizing: border-box;
             width: 22px;
+            font-size: 12px;
 
             p:nth-child(1) {
-                font-size: 8px;
-            }
-
-            p:nth-child(2) {
-                font-size: 12px;
+                transform: scale(0.67); /* font-size:8px*/
+                transform-origin: center;
             }
         }
 
@@ -187,7 +185,7 @@
         }
     }
 
-    &__calendarBar+&__calendarBar {
+    &__calendarBar + &__calendarBar {
         margin-top: 1px;
 
         li {
